@@ -1,2 +1,2 @@
 # my-leetcode
-A collection of my leetcode solutions
+A collection of my leetcode solutions, preparing for the future.
