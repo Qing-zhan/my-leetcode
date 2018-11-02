@@ -18,3 +18,5 @@ Note: In "git remote add origin git@github.com:Qing-zhan/anotherRepo.git", origi
 
 how to give up modification?
 whe not count commit?
+
+how this happen
