@@ -31,3 +31,26 @@ public:
 // 4. ['nice']
 // 5. ['', 'word']
 // 6. ['abnormal', 'abc', 'abort']
+
+// updated on 2018.11.19
+std::string longestCommonPrefix(std::vector<std::string>& strs) {
+	std::string result = "";
+	std::string& first = strs[0];
+	for (int i = 0; i < first.length(); ++i) {
+		bool flag = true;
+		for (int s = 1; s < strs.size(); ++s) {
+			if (first[i] != strs[s][i]) {
+				flag = false;
+				break;
+			}
+		}
+		if (flag) {
+			// string + char !!!
+			result += first[i];
+		}
+		else {
+			break;
+		}
+	}
+	return result;
+}

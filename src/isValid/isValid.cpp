@@ -28,3 +28,21 @@ public:
 // 2. '(){}'
 // 3. '(()'
 // 4. ')('
+
+
+// updated on 2018.11.19
+bool isValid(std::string s) {
+	std::unordered_map<char, char> mc = { { '(', ')' },{ '{', '}' },{ '[', ']' } };
+	std::stack<char> st;
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == '(' || s[i] == '{' || s[i] == '[') {
+			st.push(s[i]);
+		}
+		else {
+			if (st.size() == 0) return false;
+			char temp = st.top(); st.pop();
+			if (mc[temp] != s[i]) return false;
+		}
+	}
+	return st.size() > 0 ? false : true;
+}
