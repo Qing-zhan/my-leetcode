@@ -16,7 +16,8 @@ git push -u origin master
 
 Note: In "git remote add origin git@github.com:Qing-zhan/anotherRepo.git", origin can be any name, which denotes the remote repo branch name. For example, the name can be specified as sasaki, then the remote branch on github is sasaki. The local branch (main branch) is master by default.
 
-how to give up modification?
-whe not count commit?
-
-how this happen
+3. Take-aways for commit
+git status            #check current status
+git add .             #add current modifications
+git commit -m "info"  #commit changes added by previous step
+git -u origin master  #push work repo to remote repo in github
